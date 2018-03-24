@@ -1,9 +1,19 @@
 <template>
-  <div>
-    <h1>hello</h1>
+  <div class="container">
+    <h1 class="title">Hello World</h1>
     <div v-for="blog in blogList">
-      {{ blog.title }}
-      {{ blog.body }}
+      <div class="card">
+        <div class="card-header">
+          <p class="card-header-title">
+            {{ blog.title }}
+          </p>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            {{ blog.body }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -31,4 +41,5 @@
 </script>
 
 <style>
+  @import "../node_modules/bulma/css/bulma.css";
 </style>
